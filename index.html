@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon-pic.PNG">
+
+    <!-- Google Fonts (Example: Outfit for modern feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Optional: Lottie Player if using Lottie -->
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+</head>
+<body data-theme="dark"> <!-- Default to dark theme -->
+
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+    <a href="https://wa.me/+923288874142?text=Hi%20Usman%2C%20I%20saw%20your%20portfolio!" class="whatsapp-icon" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <a href="#home" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar glassmorphism sticky">
+        <div class="container">
+            <a href="#home" class="logo">
+                 <img class="logo-icon" src="logo.png" alt="">
+                <span class="gradient-logo">Developer</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-container">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </span>
+                </button>
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="headline animate-on-scroll fade-in-up" data-delay="0.1">
+                        <span class="gradient-text">Usman Ahmad</span><br>Web Developer
+                    </h1>
+                    <p class="subtitle animate-on-scroll fade-in-up" data-delay="0.3">
+                        Crafting elegant, responsive websites with performance and precision.
+                        <!-- Add typewriter target span if using JS library -->
+                    </p>
+                    <a href="#contact" class="btn btn-primary btn-glow animate-on-scroll fade-in-up" data-delay="0.5">
+                        Let's Contact Me <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-visual animate-on-scroll zoom-in" data-delay="0.2">
+                    <!-- Option 1: Image -->
+                    <img src="home.jpg" alt="Abstract creative visual" class="hero-image floating-effect">
+                    <!-- Option 2: Lottie Animation -->
+                    <!-- <lottie-player src="path/to/your/animation.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player> -->
+                </div>
+            </div>
+             <!-- Optional: Subtle Background Particles for Hero CTA -->
+             <div class="hero-particles"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">My Tech Arsenal</h2>
+                <div class="skills-grid">
+                    <!-- Skill Card Example -->
+                    <div class="skill-card animate-on-scroll pulse" data-delay="0.1">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-brands fa-html5 skill-icon"></i>
+                        </div>
+                        <h3>Html</h3>
+                        <div class="skill-tooltip">Advanced proficiency in building complex SPAs.</div>
+                        <div class="skill-badges">
+                            <span class="badge blue">Frontend</span>
+                            <span class="badge purple">Structure</span>
+                        </div>
+                    </div>
+                     <div class="skill-card animate-on-scroll pulse" data-delay="0.2">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-brands fa-css3-alt skill-icon"></i>
+                        </div>
+                        <h3>Css</h3>
+                         <div class="skill-tooltip">Building RESTful APIs and server-side logic.</div>
+                         <div class="skill-badges">
+                            <span class="badge lime">Design</span>
+                            <span class="badge pink">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="skill-card animate-on-scroll pulse" data-delay="0.3">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-brands fa-bootstrap skill-icon"></i>
+                        </div>
+                        <h3>Bootstrap</h3>
+                         <div class="skill-tooltip">Designing interfaces, prototypes, and design systems.</div>
+                         <div class="skill-badges">
+                            <span class="badge purple">Design</span>
+                             <span class="badge blue">Framework</span>
+                        </div>
+                    </div>
+                     <div class="skill-card animate-on-scroll pulse" data-delay="0.4">
+                        <div class="skill-icon-wrapper">
+                            <i class="fa-brands fa-js skill-icon"></i>
+                        </div>
+                        <h3>Java Script</h3>
+                         <div class="skill-tooltip">Experience with SQL (PostgreSQL) & NoSQL (MongoDB).</div>
+                         <div class="skill-badges">
+                            <span class="badge pink">Frontend</span>
+                             <span class="badge lime">Backend</span>
+                        </div>
+                    </div>
+                    <!-- Add more skills -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about section">
+            <div class="container about-layout">
+                <div class="about-visual animate-on-scroll slide-in-left" data-delay="0.1">
+                    <div class="about-image-wrapper animated-border">
+                        <img src="about-me.png" alt="Your Name Profile Picture">
+                    </div>
+                </div>
+                <div class="about-text animate-on-scroll slide-in-right" data-delay="0.3">
+                    <h2 class="section-title-sub">Usman Ahmad</h2>
+                    <h3>Crafting Clean Code, Building Bold Web Experiences</h3>
+                    <p>
+                        I'm a passionate Web Developer focused on building responsive, fast, and scalable websites. From intuitive UI/UX to powerful functionality, I combine technical precision with modern design trends to create meaningful digital experiences.
+                    </p>
+                    <p>
+                        With hands-on expertise in HTML, CSS, JavaScript, and modern frameworks, I bring ideas to life — turning visions into fully functional websites. Whether it's a portfolio, business site, or custom web app,building solutions that stand out and perform.
+                    </p>
+                    <a href="Usman(cv).pdf" download class="btn btn-secondary btn-glow-border">
+                        Download CV <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">What I Offer</h2>
+                <div class="services-grid">
+                    <!-- Service Card Example -->
+                    <div class="service-card animate-on-scroll fade-in-up" data-delay="0.1">
+                         <div class="service-icon-wrapper">
+                            <i class="fas fa-laptop-code service-icon"></i>
+                         </div>
+                         <h3>Web Development</h3>
+                         <p>I specialize in building robust and scalable web applications from front-end to back-end using modern technologies.</p>
+                    </div>
+                     <div class="service-card animate-on-scroll fade-in-up" data-delay="0.2">
+                         <div class="service-icon-wrapper">
+                             <i class="fas fa-pencil-ruler service-icon"></i>
+                         </div>
+                         <h3>UI/UX & Interaction Design</h3>
+                         <p>Crafting intuitive user flows, wireframes, prototypes, and pixel-perfect interfaces.</p>
+                    </div>
+                     <div class="service-card animate-on-scroll fade-in-up" data-delay="0.3">
+                         <div class="service-icon-wrapper">
+                             <i class="fas fa-mobile-alt service-icon"></i>
+                         </div>
+                         <h3>Responsive & Mobile-First</h3>
+                         <p>Ensuring seamless experiences across all devices, prioritizing mobile accessibility.</p>
+                    </div>
+                    <!-- Add more services -->
+                </div>
+            </div>
+        </section>
+
+         <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Card Example -->
+                    <div class="project-card animate-on-scroll zoom-in" data-delay="0.1">
+                        <img src="1.PNG" alt="Project 1 Thumbnail" class="project-thumbnail">
+                        <div class="project-overlay">
+                            <h3>musicology</h3>
+                            <p>My Responsive & Attractive Project</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Html</span>
+                                <span class="tech-badge">Css</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://usman-codex.github.io/musicology/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                                <button class="btn btn-sm btn-secondary project-modal-trigger" data-modal-id="project-modal-1">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards -->
+                    <div class="project-card animate-on-scroll zoom-in" data-delay="0.1">
+                        <img src="e.learn.PNG" alt="Project 1 Thumbnail" class="project-thumbnail">
+                        <div class="project-overlay">
+                            <h3>E-Learn</h3>
+                            <p>My Responsive & Attractive Project</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Html</span>
+                                <span class="tech-badge">Css</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://usman-codex.github.io/E-Learn/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                                <button class="btn btn-sm btn-secondary project-modal-trigger" data-modal-id="project-modal-1">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section (Conceptual - needs JS/Library for complex animation) -->
+        <section id="experience" class="experience section">
+             <div class="container">
+                  <h2 class="section-title animate-on-scroll fade-in">My Journey</h2>
+                  <div class="timeline">
+                      <!-- Timeline Item Example (Right) -->
+                       <div class="timeline-item animate-on-scroll slide-in-right">
+                           <div class="timeline-dot"></div>
+                           <div class="timeline-content">
+                               <span class="timeline-date">2025 - Present</span>
+                               <h4>Web Developer & Responsive</h4>
+                               <p>I'm responsible for leading the development of crucial features, leveraging my deep understanding of frontend technologies experience to elevate their skill sets and ensure we maintain high standards in our codebase.</p>
+                           </div>
+                       </div>
+                       <!-- Timeline Item Example (Left) -->
+                       <div class="timeline-item align-left animate-on-scroll slide-in-left">
+                           <div class="timeline-dot"></div>
+                           <div class="timeline-content">
+                               <span class="timeline-date">2024 - 2025</span>
+                               <h4>Frontend Developer & UIX Solutions</h4>
+                               <p>I worked as a Web Developer at Creative Solutions where I actively developed client websites using my frontend skills. I collaborated closely with UI designers to bring their visions to life and ensured all websites were responsive.</p>
+                           </div>
+                       </div>
+                       <!-- Add more items -->
+                  </div>
+             </div>
+        </section>
+
+      
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container contact-layout">
+                <div class="contact-text animate-on-scroll fade-in-up" data-delay="0.1">
+                    <h2 class="section-title-sub">Get In Touch</h2>
+                    <h3>Have a project in mind? Let's talk!</h3>
+                    <p>Ready for my next challenge! I'm currently seeking freelance projects and full-time employment. Let's connect – you can reach me by filling out the form or via social media.</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/usmancodex" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/usman_codex?igsh=MWRsbWR6ZzZuaHozbg==" target="_blank" aria-label="instagram" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/usman-codex" target="_blank" aria-label="GitHub" class="social-icon github"><i class="fab fa-github"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=usmancodex.dev@gmail.com" target="_blank" aria-label="g" class="social-icon g"><i class="fa-solid fa-g"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter" class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form animate-on-scroll fade-in-up" data-delay="0.3">
+                     <div class="form-group">
+                         <input type="text" id="name" name="name" required placeholder=" ">
+                         <label for="name">Your Name</label>
+                         <span class="input-glow"></span>
+                    </div>
+                    <div class="form-group">
+                         <input type="email" id="email" name="email" required placeholder=" ">
+                         <label for="email">Your Email</label>
+                          <span class="input-glow"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                         <span class="input-glow"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow submit-btn">
+                         <span class="btn-text">Send Message</span>
+                         <span class="loading-spinner"></span>
+                    </button>
+                    <div id="form-status" class="form-status"></div>
+                     <!-- Animated Confirmation Placeholder -->
+                     <div id="form-confirmation" class="form-confirmation-overlay">
+                         <div class="confirmation-content">
+                              <i class="fas fa-check-circle"></i>
+                              <p>Message Sent!</p>
+                         </div>
+                     </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glassmorphism">
+        <div class="container footer-content">
+             <div class="footer-links">
+                 <a href="#about" class="footer-link">About</a>
+                 <a href="#services" class="footer-link">Services</a>
+                 <a href="#projects" class="footer-link">Projects</a>
+             </div>
+            <div class="footer-social">
+                 <a href="https://www.linkedin.com/in/usmancodex" aria-label="LinkedIn" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                 <a href="https://www.instagram.com/usman_codex?igsh=MWRsbWR6ZzZuaHozbg==" aria-label="instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                 <a href="https://github.com/usman-codex" aria-label="GitHub" class="footer-social-icon"><i class="fab fa-github"></i></a>
+                 
+            </div>
+            <p class="footer-copy">© 2025 usman-codex. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <!-- Project Modal Structure (Example) -->
+    <div id="project-modal-1" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" data-modal-id="project-modal-1">×</button>
+            <h2>USMAN_CODEX</h2>
+            
+            <p>For more details ... Let's contact on Whatsapp or fill the Form</p>
+        <section id="contact" class="contact section">
+            <a href="#contact" target="_blank" class="btn btn-primary">Visit Live Site</a>
+        </div>
+    </div>
+    <!-- Add other modals -->
+
+
+    <script src="script.js"></script>
+    <!-- Optional: Add SwiperJS, GSAP, Particles.js etc. here -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+    <!-- <-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> 
+     <script src="path/to/particles.min.js"></script>  --> 
+
+</body>
+</html>
