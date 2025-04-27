@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                  entry.target.style.setProperty('--delay-offset', `${delay}s`); // Set delay variable
                 entry.target.classList.add('is-visible');
-                // Optional: Unobserve after animation
-                // observerInstance.unobserve(entry.target);
+               
             } else {
                  // Optional: Reset animation on scroll out
                  // entry.target.classList.remove('is-visible');
