@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- Optional: Lottie Player if using Lottie -->
-     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body data-theme="dark"> <!-- Default to dark theme -->
 
@@ -27,7 +27,7 @@
     <a href="https://wa.me/+923288874142?text=Hi%20Usman%2C%20I%20saw%20your%20portfolio!" class="whatsapp-icon" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-    
+
     <a href="#home" class="scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </a>
@@ -35,11 +35,14 @@
     <!-- Navbar -->
     <nav class="navbar glassmorphism sticky">
         <div class="container">
-            <a href="#home" class="logo">
+            <!-- Desktop Logo (visible on larger screens) -->
+            <a href="#home" class="logo desktop">
                  <img class="logo-icon" src="logo.png" alt="">
                 <span class="gradient-logo">Developer</span>
             </a>
-            <ul class="nav-menu">
+
+            <!-- Desktop Navigation Menu (visible on larger screens, direct child of container) -->
+            <ul class="nav-menu desktop-nav">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -47,19 +50,51 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+
+            <!-- Nav Actions (Desktop Toggle + Hamburger) -->
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <!-- Desktop Theme Toggle (visible on larger screens) -->
+                <button class="theme-toggle desktop js-theme-toggle" id="themeToggleDesktop" aria-label="Toggle theme">
                     <span class="icon-container">
                         <i class="fas fa-sun"></i>
                         <i class="fas fa-moon"></i>
                     </span>
                 </button>
-                <button class="hamburger" aria-label="Toggle Menu">
+                <!-- Hamburger Button (visible on mobile) -->
+                <button class="hamburger mobile" aria-label="Toggle Menu">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
                 </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu Content Wrapper (slides down on mobile, separate from container) -->
+        <!-- This wrapper is NOT in the .container on purpose -->
+        <div class="mobile-menu-wrapper">
+             <div class="mobile-menu-header">
+                 <!-- Mobile Logo (visible when menu is open) -->
+                 <a href="#home" class="logo mobile">
+                      <img class="logo-icon" src="logo.png" alt="">
+                     <span class="gradient-logo">Developer</span>
+                 </a>
+                 <!-- Mobile Theme Toggle (visible when menu is open) -->
+                  <button class="theme-toggle mobile js-theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+                      <span class="icon-container">
+                          <i class="fas fa-sun"></i>
+                          <i class="fas fa-moon"></i>
+                      </span>
+                  </button>
+             </div>
+             <!-- Mobile Nav Menu (DUPLICATE of the list above, inside wrapper) -->
+             <ul class="nav-menu mobile-nav">
+                 <li><a href="#home" class="nav-link">Home</a></li>
+                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                 <li><a href="#about" class="nav-link">About</a></li>
+                 <li><a href="#services" class="nav-link">Services</a></li>
+                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                 <li><a href="#contact" class="nav-link">Contact</a></li>
+             </ul>
         </div>
     </nav>
 
@@ -75,20 +110,15 @@
                     </h1>
                     <p class="subtitle animate-on-scroll fade-in-up" data-delay="0.3">
                         Crafting elegant, responsive websites with performance and precision.
-                        <!-- Add typewriter target span if using JS library -->
                     </p>
                     <a href="#contact" class="btn btn-primary btn-glow animate-on-scroll fade-in-up" data-delay="0.5">
                         Let's Contact Me <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="hero-visual animate-on-scroll zoom-in" data-delay="0.2">
-                    <!-- Option 1: Image -->
                     <img src="home.jpg" alt="Abstract creative visual" class="hero-image floating-effect">
-                    <!-- Option 2: Lottie Animation -->
-                    <!-- <lottie-player src="path/to/your/animation.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></lottie-player> -->
                 </div>
             </div>
-             <!-- Optional: Subtle Background Particles for Hero CTA -->
              <div class="hero-particles"></div>
         </section>
 
@@ -97,7 +127,6 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">My Tech Arsenal</h2>
                 <div class="skills-grid">
-                    <!-- Skill Card Example -->
                     <div class="skill-card animate-on-scroll pulse" data-delay="0.1">
                         <div class="skill-icon-wrapper">
                             <i class="fa-brands fa-html5 skill-icon"></i>
@@ -142,7 +171,6 @@
                              <span class="badge lime">Backend</span>
                         </div>
                     </div>
-                    <!-- Add more skills -->
                 </div>
             </div>
         </section>
@@ -176,7 +204,6 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">What I Offer</h2>
                 <div class="services-grid">
-                    <!-- Service Card Example -->
                     <div class="service-card animate-on-scroll fade-in-up" data-delay="0.1">
                          <div class="service-icon-wrapper">
                             <i class="fas fa-laptop-code service-icon"></i>
@@ -198,7 +225,6 @@
                          <h3>Responsive & Mobile-First</h3>
                          <p>Ensuring seamless experiences across all devices, prioritizing mobile accessibility.</p>
                     </div>
-                    <!-- Add more services -->
                 </div>
             </div>
         </section>
@@ -208,7 +234,6 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll fade-in">Featured Projects</h2>
                 <div class="projects-grid">
-                    <!-- Project Card Example -->
                     <div class="project-card animate-on-scroll zoom-in" data-delay="0.1">
                         <img src="1.PNG" alt="Project 1 Thumbnail" class="project-thumbnail">
                         <div class="project-overlay">
@@ -225,7 +250,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Add more project cards -->
                     <div class="project-card animate-on-scroll zoom-in" data-delay="0.1">
                         <img src="e.learn.PNG" alt="Project 1 Thumbnail" class="project-thumbnail">
                         <div class="project-overlay">
@@ -246,12 +270,11 @@
             </div>
         </section>
 
-        <!-- Experience Timeline Section (Conceptual - needs JS/Library for complex animation) -->
+        <!-- Experience Timeline Section -->
         <section id="experience" class="experience section">
              <div class="container">
                   <h2 class="section-title animate-on-scroll fade-in">My Journey</h2>
                   <div class="timeline">
-                      <!-- Timeline Item Example (Right) -->
                        <div class="timeline-item animate-on-scroll slide-in-right">
                            <div class="timeline-dot"></div>
                            <div class="timeline-content">
@@ -260,7 +283,6 @@
                                <p>I'm responsible for leading the development of crucial features, leveraging my deep understanding of frontend technologies experience to elevate their skill sets and ensure we maintain high standards in our codebase.</p>
                            </div>
                        </div>
-                       <!-- Timeline Item Example (Left) -->
                        <div class="timeline-item align-left animate-on-scroll slide-in-left">
                            <div class="timeline-dot"></div>
                            <div class="timeline-content">
@@ -269,12 +291,9 @@
                                <p>I worked as a Web Developer at Creative Solutions where I actively developed client websites using my frontend skills. I collaborated closely with UI designers to bring their visions to life and ensured all websites were responsive.</p>
                            </div>
                        </div>
-                       <!-- Add more items -->
                   </div>
              </div>
         </section>
-
-      
 
         <!-- Contact Section -->
         <section id="contact" class="contact section">
@@ -289,7 +308,6 @@
                         <a href="https://github.com/usman-codex" target="_blank" aria-label="GitHub" class="social-icon github"><i class="fab fa-github"></i></a>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=usmancodex.dev@gmail.com" target="_blank" aria-label="g" class="social-icon g"><i class="fa-solid fa-g"></i></a>
                         <a href="https://x.com/usman_codex?t=Y8eZhXqpQFdj012TXFWxwg&s=09" target="_blank" aria-label="Twitter" class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        
                     </div>
                 </div>
                 <form id="contact-form" class="contact-form animate-on-scroll fade-in-up" data-delay="0.3">
@@ -313,7 +331,6 @@
                          <span class="loading-spinner"></span>
                     </button>
                     <div id="form-status" class="form-status"></div>
-                     <!-- Animated Confirmation Placeholder -->
                      <div id="form-confirmation" class="form-confirmation-overlay">
                          <div class="confirmation-content">
                               <i class="fas fa-check-circle"></i>
@@ -338,7 +355,6 @@
                  <a href="https://www.linkedin.com/in/usmancodex" aria-label="LinkedIn" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
                  <a href="https://www.instagram.com/usman_codex?igsh=MWRsbWR6ZzZuaHozbg==" aria-label="instagram" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
                  <a href="https://github.com/usman-codex" aria-label="GitHub" class="footer-social-icon"><i class="fab fa-github"></i></a>
-                 
             </div>
             <p class="footer-copy">© 2025 usman-codex. All rights reserved.</p>
         </div>
@@ -349,19 +365,17 @@
         <div class="modal-content">
             <button class="modal-close" data-modal-id="project-modal-1">×</button>
             <h2>USMAN_CODEX</h2>
-            
             <p>For more details ... Let's contact on Whatsapp or fill the Form</p>
-        <section id="contact" class="contact section">
-            <a href="#contact" target="_blank" class="btn btn-primary">Visit Live Site</a>
+             <div class="modal-actions">
+                 <a href="https://usman-codex.github.io/musicology/" target="_blank" class="btn btn-primary btn-sm">Visit Live Site</a>
+                 <!-- Use a class to easily select and close the modal -->
+                 <a href="#contact" class="btn btn-secondary btn-sm modal-close" data-modal-id="project-modal-1">Contact Me</a>
+            </div>
         </div>
     </div>
     <!-- Add other modals -->
 
-
+    <!-- Note: script.js remains the same as the previous version -->
     <script src="script.js"></script>
-    <!-- Optional: Add SwiperJS, GSAP, Particles.js etc. here -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
-    
-
 </body>
 </html>
